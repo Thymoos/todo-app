@@ -1,0 +1,17 @@
+.title-wrapper {
+    position: absolute;
+    top: -10vh;
+    left: 0;
+    width: 600px;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-wrapper button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
