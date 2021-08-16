@@ -1,0 +1,70 @@
+.addTask {
+    background-color: hsl(235, 24%, 19%);
+    border-radius: 2px;
+    width: 600px;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+}
+
+[type="checkbox"] {
+    opacity: 0;
+}
+
+[type="checkbox"]+label {
+    position: relative;
+    padding-left: 15px;
+    cursor: pointer;
+    display: inline-block;
+    color: white;
+    margin-top: 18px;
+}
+
+[type="checkbox"]+label::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(233, 14%, 35%);
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+[type="checkbox"]:checked+label::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(233, 14%, 35%);
+    background-image: var(--check-background);
+    border-radius: 50%;
+}
+
+[type="checkbox"]:checked+label::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid hsl(233, 14%, 35%);
+    background-image: url(../images/checkmark-8.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.addTask input#text {
+    border: none;
+    background-color: transparent;
+    width: 600px;
+    font-size: 22px;
+    color: hsl(234, 39%, 85%);
+    margin-left: 40px;
+}
+
+.addTask input#text:focus {
+    outline: none;
+}

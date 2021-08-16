@@ -4,7 +4,9 @@ import './AddTask.css'
 const AddTask = () => {
     return ( 
         <div className="addTask">
-            Create a new todo...
+            <input className="checkbox" type="checkbox" name="value" id="input" />
+            <label htmlFor="input"></label>
+            <input id="text" type="text" spellCheck="false" placeholder="Create a new todo..."/>
         </div>
      );
 }
