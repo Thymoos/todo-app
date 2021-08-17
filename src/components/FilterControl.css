@@ -1,0 +1,22 @@
+.filter-wrapper {
+    position: absolute;
+    top: 80vh;
+    left: 50vw;
+    transform: translate(-50%, 0);
+    width: 600px;
+    height: 50px;
+    background-color: hsl(235, 24%, 19%);
+    color: hsl(233, 14%, 35%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    user-select: none;
+}
+
+.filter-wrapper .filter-options {
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
