@@ -2,7 +2,7 @@
     background-color: hsl(235, 24%, 19%);
     border-radius: 2px;
     width: 600px;
-    height: 60px;
+    height: 80px;
     display: flex;
     justify-content: flex-start;
     position: absolute;
@@ -21,14 +21,14 @@
     cursor: pointer;
     display: inline-block;
     color: white;
-    margin-top: 18px;
+    margin-top: 24px;
 }
 
 [type="checkbox"]+label::before {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border: 1px solid hsl(233, 14%, 35%);
     background-color: transparent;
     border-radius: 50%;
@@ -37,8 +37,8 @@
 [type="checkbox"]:checked+label::before {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border: 1px solid hsl(233, 14%, 35%);
     background-image: var(--check-background);
     border-radius: 50%;
@@ -47,10 +47,10 @@
 [type="checkbox"]:checked+label::after {
     content: "";
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border: 1px solid hsl(233, 14%, 35%);
-    background-image: url(../images/checkmark-8.png);
+    background-image: url(../images/icon-check.svg);
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 50%;
@@ -62,7 +62,7 @@
     width: 600px;
     font-size: 22px;
     color: hsl(234, 39%, 85%);
-    margin-left: 40px;
+    margin-left: 50px;
 }
 
 .addTask input#text:focus {
