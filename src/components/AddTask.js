@@ -8,9 +8,9 @@ const AddTask = () => {
 
             <ThemeControl/>
 
-            <input className="checkbox" type="checkbox" name="value" id="input" />
+            <input className="checkbox" type="checkbox"  name="value" id="input"/>
             <label htmlFor="input"></label>
-            <input id="text" type="text" spellCheck="false" placeholder="Create a new todo..."/>
+            <input id="text" type="text" spellCheck="false" maxlength="45" placeholder="Create a new todo..."/>
         </div>
      );
 }
