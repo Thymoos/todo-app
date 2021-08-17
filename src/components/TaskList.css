@@ -1,6 +1,6 @@
 .task-list {
     background-color: hsl(235, 24%, 19%);
-    border-radius: 2px;
+    border-radius: 10px 10px 0 0;
     width: 600px;
     height: 480px;
     display: grid;
@@ -21,4 +21,8 @@
     color: hsl(234, 39%, 85%);
     margin-left: 80px;
     user-select: none;
+}
+
+.shadow-main {
+    box-shadow: 1000px 1000px;
 }

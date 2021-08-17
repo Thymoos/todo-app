@@ -13,6 +13,7 @@
     padding-left: 30px;
     padding-right: 30px;
     user-select: none;
+    border-radius: 0 0 10px 10px;
 }
 
 .filter-wrapper .filter-options {

@@ -1,6 +1,6 @@
 .addTask {
     background-color: hsl(235, 24%, 19%);
-    border-radius: 2px;
+    border-radius: 10px;
     width: 600px;
     height: 80px;
     display: flex;
