@@ -3,12 +3,14 @@
     border-radius: 10px 10px 0 0;
     width: 600px;
     height: 480px;
+    max-height: 480px;
     display: grid;
     position: absolute;
     top: 32vh;
     left: 50vw;
     transform: translate(-50%, 0);
     z-index: 2;
+    overflow-y: auto;
 }
 
 .task {
@@ -24,5 +26,29 @@
 }
 
 .shadow-main {
-    box-shadow: 1000px 1000px;
+    z-index: 10;
+    /* For some reason box-shadow won't work
+    It probably has something to do with z-index */
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: hsl(233, 14%, 35%);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(234, 11%, 52%);
 }
