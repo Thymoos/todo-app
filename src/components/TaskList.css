@@ -25,12 +25,6 @@
     user-select: none;
 }
 
-.shadow-main {
-    z-index: 10;
-    /* For some reason box-shadow won't work
-    It probably has something to do with z-index */
-}
-
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
