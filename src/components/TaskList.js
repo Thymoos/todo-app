@@ -47,7 +47,7 @@ const TaskList = () => {
         <div className="task-list">
             
             {tasks.map((task, index) => (
-                <div className="task"><input type="checkbox" name="value" id={index} /><label htmlFor={index}></label><p>{task.text}</p><img src={deleteBtn} alt="X" /></div>
+                <div className="task"><input type="checkbox" name="value" id={index} /><label htmlFor={index}></label><p className={task.completed ? "completed" : ""}>{task.text}</p><img src={deleteBtn} alt="X" /></div>
             ))}
 
         </div>

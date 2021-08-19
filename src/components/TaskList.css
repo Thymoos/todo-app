@@ -26,6 +26,11 @@
     user-select: none;
 }
 
+.task p.completed {
+    color: hsl(233, 14%, 35%);
+    text-decoration: line-through;
+}
+
 .task img {
     position: absolute;
     top: 50%;
