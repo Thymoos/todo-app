@@ -52,12 +52,26 @@ const TaskList = () => {
         setTasks(newTodos);
     }
 
+    const handleTaskDelete = (e) => {
+        const taskId = e.target.id;
+
+        console.log(taskId);
+        
+        const newTodos = [...tasks];
+
+        newTodos.splice(taskId, 1);
+
+        console.log(newTodos);
+
+        setTasks(newTodos);
+    }
+
     return ( 
         <div className="shadow-main">
         <div className="task-list">
             
-            {tasks.map((task) => (
-                <div className="task" key={task.id}><input type="checkbox" name="value" id={task.id} /><label htmlFor={task.id} onClick={handleTaskCompletion}></label><p className={task.completed ? "completed" : ""}>{task.text}</p><img src={deleteBtn} alt="X" /></div>
+            {tasks.map((task, index) => (
+                <div className="task" key={task.id}><input type="checkbox" name="value" id={task.id} /><label htmlFor={task.id} onClick={handleTaskCompletion}></label><p className={task.completed ? "completed" : ""}>{task.text}</p><img src={deleteBtn} alt="X" id={index} onClick={handleTaskDelete}/></div>
             ))}
 
         </div>
