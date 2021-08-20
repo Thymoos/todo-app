@@ -68,3 +68,7 @@
 .addTask input#text:focus {
     outline: none;
 }
+
+.addTask input::placeholder {
+    color: hsl(233, 14%, 35%);
+}
