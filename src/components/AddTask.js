@@ -5,6 +5,7 @@ import TaskList from './TaskList';
 
 const AddTask = () => {
     return ( 
+        <>
         <div className="addTask">
 
             <ThemeControl/>
@@ -13,8 +14,11 @@ const AddTask = () => {
             <label htmlFor="input"></label>
             <input id="text" type="text" spellCheck="false" maxLength="45" placeholder="Create a new todo..."/>
 
-            <TaskList />
         </div>
+
+        <TaskList />
+
+        </>
      );
 }
  
