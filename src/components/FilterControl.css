@@ -16,8 +16,32 @@
     border-radius: 0 0 10px 10px;
 }
 
+.filter-wrapper p:nth-child(3) {
+    cursor: pointer;
+}
+
+.filter-wrapper p:nth-child(3):hover {
+    color: hsl(236, 33%, 92%);
+}
+
 .filter-wrapper .filter-options {
     width: 170px;
     display: flex;
     justify-content: space-between;
+}
+
+.filter-wrapper .filter-options input {
+    display: none;
+}
+
+.filter-wrapper .filter-options label {
+    cursor: pointer;
+}
+
+.filter-wrapper .filter-options label:hover {
+    color: hsl(236, 33%, 92%);
+}
+
+.filter-wrapper .filter-options [type="radio"]:checked+label {
+    color: var(--bright-blue);
 }
