@@ -9,7 +9,7 @@ const defaultTaskList = [
     {
         id: 0,
         text: "Do the laundry",
-        completed: false
+        completed: true
     },
     {
         id: 1,
@@ -19,7 +19,7 @@ const defaultTaskList = [
     {
         id: 2,
         text: "Try to look good",
-        completed: false
+        completed: true
     },
     {
         id: 3,
@@ -71,7 +71,7 @@ const TaskList = () => {
         <div className="task-list">
             
             {tasks.map((task, index) => (
-                <div className="task" key={task.id}><input type="checkbox" name="value" id={task.id} /><label htmlFor={task.id} onClick={handleTaskCompletion}></label><p className={task.completed ? "completed" : ""}>{task.text}</p><img src={deleteBtn} alt="X" id={index} onClick={handleTaskDelete}/></div>
+                <div className="task" key={task.id}><input type="checkbox" name="value" id={task.id} checked={task.completed ? true : false}/><label htmlFor={task.id} onClick={handleTaskCompletion}></label><p className={task.completed ? "completed" : ""}>{task.text}</p><img src={deleteBtn} alt="X" id={index} onClick={handleTaskDelete}/></div>
             ))}
 
         </div>
