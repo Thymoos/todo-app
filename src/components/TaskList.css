@@ -19,6 +19,7 @@
     font-size: 22px;
     border-bottom: 1px solid hsl(237, 14%, 26%);
     position: relative;
+    transition: 0.2s;
 }
 
 .task p {
@@ -37,7 +38,13 @@
     top: 50%;
     right: 20px;
     transform: translate(0, -50%);
+    color: hsl(236, 33%, 92%);
     cursor: pointer;
+    display: none;
+}
+
+.task:hover img {
+    display: initial;
 }
 
 /* width */
