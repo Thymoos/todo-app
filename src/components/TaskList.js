@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './TaskList.css';
 
 import deleteBtn from '../images/icon-cross.svg';
@@ -38,9 +38,21 @@ const defaultTaskList = [
     }
 ];
 
-const TaskList = () => {
+const TaskList = ({newTask}) => {
 
     const [tasks, setTasks] = useState(defaultTaskList);
+
+    useEffect(() => {
+
+        if(newTask !== ""){
+        const newTaskObject = {
+            id: tasks.length,
+            text: newTask,
+            completed: false
+        }
+
+        setTasks(prevTasks => [...prevTasks, newTaskObject])}
+    }, [newTask]);
 
     const handleTaskCompletion = (e) => {
         const htmlForId = e.target.htmlFor;
@@ -54,14 +66,10 @@ const TaskList = () => {
 
     const handleTaskDelete = (e) => {
         const taskId = e.target.id;
-
-        console.log(taskId);
         
         const newTodos = [...tasks];
 
         newTodos.splice(taskId, 1);
-
-        console.log(newTodos);
 
         setTasks(newTodos);
     }
