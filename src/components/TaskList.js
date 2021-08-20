@@ -75,7 +75,9 @@ const TaskList = () => {
             ))}
 
         </div>
-        <FilterControl/>
+        <FilterControl 
+        activeTasks={tasks.filter(task => task.completed===false).length}
+        />
         </div>
      );
 }

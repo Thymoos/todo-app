@@ -1,10 +1,10 @@
 import React from 'react';
 import './FilterControl.css';
 
-const FilterControl = () => {
+const FilterControl = ({activeTasks}) => {
     return ( 
         <div className="filter-wrapper">
-            <p>5 items left</p>
+            <p>{activeTasks} items left</p>
             <div className="filter-options">
                 <p>All</p>
                 <p>Active</p>
