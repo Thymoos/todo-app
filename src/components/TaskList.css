@@ -5,6 +5,7 @@
     height: 480px;
     max-height: 480px;
     display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     position: absolute;
     top: 32vh;
     left: 50vw;
