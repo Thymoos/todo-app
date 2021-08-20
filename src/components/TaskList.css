@@ -41,6 +41,7 @@
     color: hsl(236, 33%, 92%);
     cursor: pointer;
     display: none;
+    user-select: none;
 }
 
 .task:hover img {
