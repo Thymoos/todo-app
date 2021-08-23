@@ -43,6 +43,9 @@ const defaultTaskList = [
 const TaskList = ({newTask}) => {
 
     const [tasks, setTasks] = useState(defaultTaskList);
+    const [activeTasks, setActiveTasks] = useState(tasks.filter(task => task.completed === false));
+    const [completedTasks, setCompletedTasks] = useState(tasks.filter(task => task.completed === true));
+    const [filterPosition, setFilterPosition] = useState(tasks);
 
     useEffect(() => {
 
@@ -62,11 +65,14 @@ const TaskList = ({newTask}) => {
 
         const newTodos = [...tasks];
 
+        // eslint-disable-next-line eqeqeq
         const realIndex = newTodos.findIndex(task => task.id == htmlForId);
         
         newTodos[realIndex].completed = !newTodos[realIndex].completed; 
 
         setTasks(newTodos);
+        setActiveTasks(tasks.filter(task => task.completed === false));
+        setCompletedTasks(tasks.filter(task => task.completed === true));
     }
 
     const handleTaskDelete = (e) => {
@@ -77,6 +83,8 @@ const TaskList = ({newTask}) => {
         newTodos.splice(taskId, 1);
 
         setTasks(newTodos);
+        setActiveTasks(tasks.filter(task => task.completed === false));
+        setCompletedTasks(tasks.filter(task => task.completed === true));
     }
 
     const clearCompletedTasks = () => {
@@ -96,13 +104,23 @@ const TaskList = ({newTask}) => {
         }
 
          setTasks(newTodos);
+          setActiveTasks(tasks.filter(task => task.completed === false));
+          setCompletedTasks(tasks.filter(task => task.completed === true));
+    }
+
+    const handleFilterChange = (e) => {
+        const newPosition = e.target.id;
+
+        if (newPosition === "all") setFilterPosition(tasks);
+        else if (newPosition === "active") setFilterPosition(activeTasks);
+        else setFilterPosition(completedTasks);
     }
 
     return ( 
         <div className="shadow-main">
         <div className="task-list">
             
-            {tasks.map((task, index) => (
+            {filterPosition.map((task, index) => (
                 <div className="task" key={task.id}>
                     <input type="checkbox" name="value" id={task.id} defaultChecked={task.completed ? true : false}/>
                     <label htmlFor={task.id} onClick={handleTaskCompletion}></label>
@@ -115,6 +133,7 @@ const TaskList = ({newTask}) => {
         <FilterControl 
         activeTasks={tasks.filter(task => task.completed===false).length}
         clearCompletedTasks={clearCompletedTasks}
+        handleFilterChange={handleFilterChange}
         />
         </div>
      );
