@@ -61,8 +61,10 @@ const TaskList = ({newTask}) => {
         const htmlForId = e.target.htmlFor;
 
         const newTodos = [...tasks];
+
+        const realIndex = newTodos.findIndex(task => task.id == htmlForId);
         
-        newTodos[htmlForId].completed = !newTodos[htmlForId].completed; 
+        newTodos[realIndex].completed = !newTodos[realIndex].completed; 
 
         setTasks(newTodos);
     }
@@ -77,22 +79,45 @@ const TaskList = ({newTask}) => {
         setTasks(newTodos);
     }
 
+    const clearCompletedTasks = () => {
+        const completedTasks = tasks.filter(task => task.completed===true);
+        const newTodos = [...tasks];
+
+        for(var i = 0; i < completedTasks.length; i++){
+            const id = completedTasks[i].id;
+
+            const index = newTodos.findIndex((task, index) => {
+                if (task.hasOwnProperty("id")){
+                if (task.id === id) {return true}
+                else return false;
+           
+            } else return false})
+            newTodos.splice(index, 1);
+        }
+
+         setTasks(newTodos);
+    }
+
     return ( 
         <div className="shadow-main">
         <div className="task-list">
             
             {tasks.map((task, index) => (
-                <div className="task" key={task.id}><input type="checkbox" name="value" id={task.id} checked={task.completed ? true : false}/><label htmlFor={task.id} onClick={handleTaskCompletion}></label><p className={task.completed ? "completed" : ""}>{task.text}</p><img src={deleteBtn} alt="X" id={index} onClick={handleTaskDelete}/></div>
+                <div className="task" key={task.id}>
+                    <input type="checkbox" name="value" id={task.id} defaultChecked={task.completed ? true : false}/>
+                    <label htmlFor={task.id} onClick={handleTaskCompletion}></label>
+                    <p className={task.completed ? "completed" : ""}>{task.text}</p>
+                    <img src={deleteBtn} alt="X" id={index} onClick={handleTaskDelete}/>
+                </div>
             ))}
 
         </div>
         <FilterControl 
         activeTasks={tasks.filter(task => task.completed===false).length}
+        clearCompletedTasks={clearCompletedTasks}
         />
         </div>
      );
 }
-
-// Labels are needed for checkboxes to work
 
 export default TaskList;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './FilterControl.css';
 
-const FilterControl = ({activeTasks}) => {
+const FilterControl = ({activeTasks, clearCompletedTasks}) => {
 
     return ( 
         <div className="filter-wrapper">
@@ -13,7 +13,7 @@ const FilterControl = ({activeTasks}) => {
                 <input type="radio" name="filter-group" id="completed"/><label htmlFor="completed">Completed</label>
 
             </div>
-            <p>Clear completed</p>
+            <p onClick={clearCompletedTasks}>Clear completed</p>
         </div>
      );
 }
