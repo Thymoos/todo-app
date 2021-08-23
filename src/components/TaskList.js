@@ -60,6 +60,14 @@ const TaskList = ({newTask}) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [newTask]);
 
+    useEffect(() => {
+        setFilterPosition(tasks);
+        
+        const radio = document.getElementById("all");
+        
+        radio.checked = true;
+    }, [tasks])
+
     const handleTaskCompletion = (e) => {
         const htmlForId = e.target.htmlFor;
 
