@@ -6,7 +6,6 @@ function App() {
     <>
     <div className="background-image"></div>
     <AddTask/>
-    <footer>Drag and drop to reorder list</footer>
     </>
   );
 }
