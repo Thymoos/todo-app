@@ -71,7 +71,7 @@
     background: hsl(234, 11%, 52%);
 }
 
-@media(max-width: 420px) {
+@media(max-width: 720px) {
     .task-list {
         width: 90vw;
         height: 360px;

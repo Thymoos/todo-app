@@ -23,7 +23,7 @@
     --img-top: url(./images/bg-desktop-light.jpg);
 }
 
-@media(max-width: 420px) {
+@media(max-width: 720px) {
     .dark-theme {
         --img-top: url(./images/bg-mobile-dark.jpg);
     }

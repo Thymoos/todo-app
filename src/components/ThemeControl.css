@@ -16,7 +16,7 @@
     cursor: pointer;
 }
 
-@media(max-width: 420px) {
+@media(max-width: 720px) {
     .title-wrapper {
         top: -8vh;
         left: 0;

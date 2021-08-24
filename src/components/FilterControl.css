@@ -1,6 +1,6 @@
 .filter-wrapper {
     position: absolute;
-    top: 80vh;
+    top: calc(32vh + 480px);
     left: 50vw;
     transform: translate(-50%, 0);
     width: 600px;
@@ -46,9 +46,9 @@
     color: var(--bright-blue);
 }
 
-@media(max-width: 420px) {
+@media(max-width: 720px) {
     .filter-wrapper {
-        top: 80vh;
+        top: calc(26vh + 360px);
         left: 50vw;
         transform: translate(-50%, 0);
         width: 90vw;

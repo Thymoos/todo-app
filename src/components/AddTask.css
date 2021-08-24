@@ -73,7 +73,7 @@
     color: var(--text-inactive);
 }
 
-@media(max-width: 420px) {
+@media(max-width: 720px) {
     .addTask {
         width: 90vw;
         height: 60px;
