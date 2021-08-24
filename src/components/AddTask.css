@@ -72,3 +72,39 @@
 .addTask input::placeholder {
     color: var(--text-inactive);
 }
+
+@media(max-width: 420px) {
+    .addTask {
+        width: 90vw;
+        height: 60px;
+        top: 15vh;
+        left: 50vw;
+        transform: translate(-50%, 0);
+    }
+
+    [type="checkbox"]+label {
+        padding-left: 6px;
+        margin-top: 18px;
+    }
+
+    [type="checkbox"]+label::before {
+        width: 20px;
+        height: 20px;
+    }
+
+    [type="checkbox"]:checked+label::before {
+        width: 20px;
+        height: 20px;
+    }
+
+    [type="checkbox"]:checked+label::after {
+        width: 20px;
+        height: 20px;
+    }
+
+    .addTask input#text {
+        width: 300px;
+        font-size: 14px;
+        margin-left: 40px;
+    }
+}

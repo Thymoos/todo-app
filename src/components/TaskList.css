@@ -70,3 +70,26 @@
 ::-webkit-scrollbar-thumb:hover {
     background: hsl(234, 11%, 52%);
 }
+
+@media(max-width: 420px) {
+    .task-list {
+        width: 90vw;
+        height: 360px;
+        max-height: 480px;
+        top: 26vh;
+        left: 50vw;
+    }
+
+    .task {
+        height: 60px;
+        font-size: 14px;
+    }
+
+    .task img {
+        display: initial;
+    }
+
+    .task p {
+        margin-left: 62px;
+    }
+}

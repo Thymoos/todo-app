@@ -22,3 +22,13 @@
     --body-bgc: hsl(236, 33%, 92%);
     --img-top: url(./images/bg-desktop-light.jpg);
 }
+
+@media(max-width: 420px) {
+    .dark-theme {
+        --img-top: url(./images/bg-mobile-dark.jpg);
+    }
+
+    .light-theme {
+        --img-top: url(./images/bg-mobile-light.jpg);
+    }
+}

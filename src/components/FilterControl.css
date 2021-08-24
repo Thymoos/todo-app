@@ -45,3 +45,34 @@
 .filter-wrapper .filter-options [type="radio"]:checked+label {
     color: var(--bright-blue);
 }
+
+@media(max-width: 420px) {
+    .filter-wrapper {
+        top: 80vh;
+        left: 50vw;
+        transform: translate(-50%, 0);
+        width: 90vw;
+        height: 50px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 14px;
+    }
+
+    .filter-wrapper .filter-options {
+        background-color: var(--component-bgc);
+        width: 90vw;
+        height: 45px;
+        border-radius: 10px;
+        position: absolute;
+        bottom: -9vh;
+        left: 0;
+        font-size: 16px;
+        font-weight: 700;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .filter-wrapper .filter-options label {
+        padding: 10px;
+    }
+}
