@@ -5,8 +5,6 @@ import deleteBtn from '../images/icon-cross.svg';
 
 import FilterControl from './FilterControl';
 
-// Drag and drop is explained here: https://www.w3schools.com/html/html5_draganddrop.asp
-
 const defaultTaskList = [
     {
         id: 0,

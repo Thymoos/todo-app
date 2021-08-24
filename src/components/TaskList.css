@@ -1,5 +1,5 @@
 .task-list {
-    background-color: hsl(235, 24%, 19%);
+    background-color: var(--component-bgc);
     border-radius: 10px 10px 0 0;
     width: 600px;
     height: 480px;
@@ -17,19 +17,20 @@
 .task {
     height: 80px;
     font-size: 22px;
-    border-bottom: 1px solid hsl(237, 14%, 26%);
+    border-bottom: 1px solid var(--text-inactive);
     position: relative;
     transition: 0.2s;
 }
 
 .task p {
-    color: hsl(234, 39%, 85%);
+    color: var(--text-active);
     margin-left: 80px;
     user-select: none;
 }
 
 .task p.completed {
-    color: hsl(233, 14%, 35%);
+    color: var(--text-inactive);
+    ;
     text-decoration: line-through;
 }
 
@@ -38,7 +39,7 @@
     top: 50%;
     right: 20px;
     transform: translate(0, -50%);
-    color: hsl(236, 33%, 92%);
+    color: var(--text-active);
     cursor: pointer;
     display: none;
     user-select: none;
@@ -61,7 +62,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: hsl(233, 14%, 35%);
+    background: var(--text-inactive);
     border-radius: 10px;
 }
 

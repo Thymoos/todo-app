@@ -3,7 +3,22 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
-
     --bright-blue: hsl(220, 98%, 61%);
     --check-background: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.dark-theme {
+    --text-inactive: hsl(233, 14%, 35%);
+    --text-active: hsl(236, 33%, 92%);
+    --component-bgc: hsl(235, 24%, 19%);
+    --body-bgc: hsl(235, 21%, 11%);
+    --img-top: url(./images/bg-desktop-dark.jpg);
+}
+
+.light-theme {
+    --text-inactive: hsl(236, 9%, 61%);
+    --text-active: hsl(235, 19%, 35%);
+    --component-bgc: hsl(0, 0%, 98%);
+    --body-bgc: hsl(236, 33%, 92%);
+    --img-top: url(./images/bg-desktop-light.jpg);
 }

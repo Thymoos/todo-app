@@ -1,15 +1,18 @@
 body {
-    background-color: hsl(235, 21%, 11%);
+    background-color: var(--body-bgc);
 }
 
 .background-image {
     text-align: center;
 }
 
-.background-image img {
+.background-image {
     z-index: -1;
     width: 100vw;
     height: 33vh;
+    background-image: var(--img-top);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 footer {
@@ -17,5 +20,5 @@ footer {
     bottom: 5vh;
     left: 50vw;
     transform: translate(-50%, 0);
-    color: hsl(233, 14%, 35%);
+    color: var(--text-inactive);
 }
